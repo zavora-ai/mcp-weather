@@ -1,0 +1,60 @@
+server_id = "mcp_weather"
+display_name = "Weather"
+version = "1.0.0"
+domain = "weather"
+sdk_version = "0.1.0"
+risk_level = "low"
+writes_allowed = "none"
+transports = ["stdio"]
+credentials = []
+governance_gates = []
+environments = ["development", "staging", "production"]
+
+[[tools]]
+name = "get_current_weather"
+description = "Get current weather conditions for a location"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "get_forecast"
+description = "Get daily weather forecast for up to 16 days"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "get_hourly_forecast"
+description = "Get hourly weather forecast for the next 48 hours"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "get_historical_weather"
+description = "Get historical weather data for a date range"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "get_air_quality"
+description = "Get current air quality index and pollutant levels"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "get_marine_conditions"
+description = "Get marine/ocean conditions (waves, currents)"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []
+
+[[tools]]
+name = "geocode_location"
+description = "Search for a location by name and get coordinates"
+risk_class = "read_only"
+requires_approval = false
+credential_bindings = []

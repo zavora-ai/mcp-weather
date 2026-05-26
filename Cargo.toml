@@ -1,0 +1,20 @@
+[workspace]
+
+[package]
+name = "mcp-weather"
+version = "1.0.0"
+edition = "2024"
+description = "Global weather intelligence MCP server — forecasts, historical data, air quality, marine conditions via Open-Meteo (free, no API key)"
+license = "Apache-2.0"
+repository = "https://github.com/zavora-ai/mcp-weather"
+keywords = ["mcp", "weather", "forecast", "climate", "open-meteo"]
+categories = ["science", "api-bindings"]
+
+[dependencies]
+adk-mcp-sdk = "0.1"
+rmcp = { version = "1.7", features = ["server", "transport-io", "macros"] }
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+reqwest = { version = "0.12", features = ["json"] }
+anyhow = "1"
